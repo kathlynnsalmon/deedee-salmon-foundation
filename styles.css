@@ -968,3 +968,21 @@ h1, h2, h3 { font-weight: 600; }
   * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .reveal { opacity: 1 !important; transform: none !important; }
 }
+
+/* ---- Venmo band (give page) ---- */
+.venmo-band { text-align: center; }
+.venmo-band h2 {
+  font-family: 'Bodoni Moda', serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: clamp(22px, 3.5vw, 28px);
+  text-transform: uppercase;
+  margin: 12px 0 10px;
+}
+.venmo-band p {
+  font-size: 15.5px;
+  line-height: 1.7;
+  opacity: 0.85;
+  margin: 0 auto 20px;
+  max-width: 560px;
+}
