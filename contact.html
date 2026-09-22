@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Deedee Salmon Foundation</title>
+<meta name="description" content="Get in touch with the Deedee Salmon Foundation in Fort Stockton, Texas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Bodoni+Moda:ital,wght@1,600;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand-mark">Deedee Salmon Foundation<span>Deandrea Munoz Salmon</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav class="main-nav" id="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="pillars.html">Pillars</a></li>
+        <li><a href="give.html">Ways to Partner</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+        <li><a href="give.html" class="nav-give">Give Now</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-header">
+    <div class="wrap">
+      <span class="kicker">Get in Touch</span>
+      <h1>We'd Love to Hear From You</h1>
+      <p id="context-line">Questions about the tournament, becoming a Legacy Giving Partner, or anything else. Send us a note.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap two-col">
+
+      <div>
+        <div class="section-head">
+          <span class="kicker">Send a Message</span>
+          <h2>Reach the Family</h2>
+        </div>
+        <form class="form-grid" id="contact-form" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="reason">What's this about</label>
+            <select id="reason" name="reason">
+              <option value="general">General question</option>
+              <option value="golf">Annual Golf Tournament</option>
+              <option value="legacy">Legacy Giving Partner</option>
+              <option value="miles">Miles for Mom</option>
+              <option value="scholarship">Scholarship program</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </div>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div>
+        <div class="section-head">
+          <span class="kicker">Foundation Details</span>
+          <h2>Find Us</h2>
+        </div>
+        <div class="contact-info">
+          <div class="item">
+            <div class="label">Location</div>
+            <div class="value">Fort Stockton, Texas</div>
+          </div>
+          <div class="item">
+            <div class="label">Email</div>
+            <div class="value">hello@deedeesalmonfoundation.org</div>
+          </div>
+          <div class="item">
+            <div class="label">Follow Along</div>
+            <div class="value">Miles for Mom updates are shared during select race weekends.</div>
+          </div>
+          <div class="item">
+            <div class="label">Our Verse</div>
+            <div class="value" style="font-style: italic;">"I believe that I shall look upon the goodness of the Lord in the land of the living." Psalm 27:13</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-mark">Deedee Salmon Foundation</div>
+        <p>A family-led foundation carrying Deedee Salmon's legacy forward by celebrating excellence, empowering families, and living generously in Fort Stockton, Texas.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="pillars.html">Pillars</a></li>
+          <li><a href="give.html">Ways to Partner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get Involved</h4>
+        <ul>
+          <li><a href="legacy-giving.html">Give Now</a></li>
+          <li><a href="golf-tournament.html">Annual Golf Tournament</a></li>
+          <li><a href="contact.html?reason=miles">Miles for Mom</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Deedee Salmon Foundation. Fort Stockton, Texas.</span>
+      <span>Psalm 27:13</span>
+    </div>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+<script>
+  // Prefill the form based on ?reason=&tier=&frequency= params coming from
+  // the Golf Tournament and Legacy Giving pages.
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    var reason = params.get('reason');
+    var tier = params.get('tier');
+    var frequency = params.get('frequency');
+
+    if (reason) {
+      var select = document.getElementById('reason');
+      if (select && Array.from(select.options).some(function (o) { return o.value === reason; })) {
+        select.value = reason;
+      }
+    }
+
+    if (tier || frequency) {
+      var textarea = document.getElementById('message');
+      var lines = [];
+      if (tier) lines.push('Regarding: ' + tier);
+      if (frequency) lines.push('Preferred frequency: ' + frequency);
+      textarea.value = lines.join('\n') + '\n\n';
+    }
+
+    var contextLine = document.getElementById('context-line');
+    if (reason === 'golf') {
+      contextLine.textContent = tier
+        ? 'Reserving: ' + tier + '. Fill out the form below and we will confirm availability and next steps.'
+        : "Questions about the Annual Golf Tournament? Send us a note.";
+    } else if (reason === 'legacy') {
+      contextLine.textContent = frequency
+        ? 'Setting up a ' + frequency.toLowerCase() + ' gift. Fill out the form below and we will follow up with how to give.'
+        : 'Interested in becoming a Legacy Giving Partner? Send us a note.';
+    } else if (reason === 'miles') {
+      contextLine.textContent = 'Want to follow along or give during a Miles for Mom race weekend? Send us a note.';
+    }
+  })();
+
+  document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var status = document.getElementById('form-status');
+    status.textContent = "Thank you. We'll be in touch soon.";
+    status.classList.add('success');
+    this.reset();
+  });
+</script>
+</body>
+</html>
