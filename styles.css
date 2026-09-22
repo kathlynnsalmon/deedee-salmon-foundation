@@ -986,3 +986,28 @@ h1, h2, h3 { font-weight: 600; }
   margin: 0 auto 20px;
   max-width: 560px;
 }
+
+/* ---- Photos + "coming soon" placeholders ---- */
+.family-photo {
+  aspect-ratio: 3 / 4;
+  height: auto;
+  object-position: center top;
+}
+
+.pillar-photo-slot,
+.flyer-frame {
+  background: var(--pillar-color, var(--obsidian));
+  border: none;
+  color: var(--bone);
+  text-align: center;
+  padding: 16px;
+}
+.pillar-photo-slot span,
+.flyer-frame span {
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  opacity: 0.75;
+}
