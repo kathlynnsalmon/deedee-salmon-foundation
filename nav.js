@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // Mobile nav toggle
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.querySelector('.main-nav');
   if (toggle && nav) {
@@ -9,24 +8,28 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Header shadow once page has scrolled
+  // Nav goes from clear glass (over the dark hero/page-header) to a
+  // frosted, readable state once you scroll past it.
   var header = document.querySelector('.site-header');
-  if (header) {
-    var onScroll = function () {
-      header.classList.toggle('scrolled', window.scrollY > 8);
+  var darkBlock = document.querySelector('.hero') || document.querySelector('.page-header');
+  if (header && darkBlock) {
+    var setScrolled = function () {
+      var threshold = Math.max(darkBlock.offsetHeight - 90, 60);
+      header.classList.toggle('scrolled', window.scrollY > threshold);
     };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
+    window.addEventListener('scroll', setScrolled, { passive: true });
+    window.addEventListener('resize', setScrolled);
+    setScrolled();
+  } else if (header) {
+    header.classList.add('scrolled');
   }
 
-  // Subtle scroll-reveal for sections
+  // Subtle scroll-reveal for anything marked .reveal
   var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var revealTargets = document.querySelectorAll('.section, .hero, .page-header, .cta-band');
-
+  var targets = document.querySelectorAll('.reveal');
   if (prefersReduced || !('IntersectionObserver' in window)) {
-    revealTargets.forEach(function (el) { el.classList.add('is-visible'); });
+    targets.forEach(function (el) { el.classList.add('is-visible'); });
   } else {
-    revealTargets.forEach(function (el) { el.classList.add('reveal'); });
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
@@ -34,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
-    revealTargets.forEach(function (el) { observer.observe(el); });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+    targets.forEach(function (el) { observer.observe(el); });
   }
 });

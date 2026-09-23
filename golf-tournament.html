@@ -6,7 +6,7 @@
 <title>Annual Golf Tournament | Deedee Salmon Memorial</title>
 <meta name="description" content="Play, sponsor, or partner with the Deedee Salmon Memorial's Annual Golf Tournament. See the flyer and current sponsorship openings.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Bodoni+Moda:ital,wght@1,600;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Bodoni+Moda:ital,wght@1,600;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,17 +15,19 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a href="index.html" class="brand-mark">Deedee Salmon Memorial<span>Deandrea Munoz Salmon</span></a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
-    <nav class="main-nav" id="primary-nav" aria-label="Primary">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="pillars.html">Pillars</a></li>
-        <li><a href="give.html" aria-current="page">Ways to Partner</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="https://www.venmo.com/u/deedeesalmonmemorial" class="nav-give" target="_blank" rel="noopener">Give Now</a></li>
-      </ul>
+    <nav class="nav-glass">
+      <a href="index.html" class="brand-mark">Deedee Salmon Memorial<span>Deandrea Munoz Salmon</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <nav class="main-nav" id="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="pillars.html">Pillars</a></li>
+          <li><a href="give.html" aria-current="page">Ways to Partner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://www.venmo.com/u/deedeesalmonmemorial" class="nav-give" target="_blank" rel="noopener">Give Now</a></li>
+        </ul>
+      </nav>
     </nav>
   </div>
 </header>
@@ -33,10 +35,10 @@
 <main id="main">
 
   <section class="page-header">
-    <div class="wrap">
+    <div class="wrap page-header-inner">
       <span class="kicker">Play. Sponsor. Partner.</span>
       <h1>Annual Golf Tournament</h1>
-      <p>Every dollar raised on the course helps fund the memorial's work all year long.</p>
+      <p>Every dollar raised on the course helps fund the memorial's work in Fort Stockton.</p>
     </div>
   </section>
 
@@ -45,38 +47,38 @@
       <a href="give.html" class="back-link">&larr; Back to Ways to Partner</a>
 
       <div class="two-col">
-        <div>
-          <div class="section-head">
+        <div class="reveal reveal-item">
+          <div class="section-head" style="text-align:left; margin-bottom: 24px;">
             <span class="kicker">Tournament Flyer</span>
-            <h2>See the Full Details</h2>
+            <h2 style="font-family:'Playfair Display',serif; font-weight:700; font-size: clamp(24px,3.2vw,32px);">See the Full Details</h2>
           </div>
-          <div class="flyer-frame" aria-hidden="true">
-            <span>Flyer Coming Soon</span>
+          <div class="photo-slot flyer-frame" aria-hidden="true">
+            <span>Tournament flyer goes here.<br>Swap this box for &lt;img class="photo-frame" src="images/golf-flyer.jpg"&gt; once the design is ready.</span>
           </div>
         </div>
 
-        <div>
-          <div class="section-head">
+        <div class="reveal reveal-item">
+          <div class="section-head" style="text-align:left; margin-bottom: 24px;">
             <span class="kicker">Quick Facts</span>
-            <h2>Save the Date</h2>
+            <h2 style="font-family:'Playfair Display',serif; font-weight:700; font-size: clamp(24px,3.2vw,32px);">Save the Date</h2>
           </div>
-          <p class="lede" style="margin-bottom: 10px;">Held each fall, close to Deedee's birthday, this tournament is one of the biggest days on the memorial's calendar.</p>
+          <p class="lede" style="text-align:left; margin-bottom: 10px;">Held each fall, close to Deedee's birthday, this tournament is one of the biggest days on the memorial's calendar.</p>
           <div class="facts-row">
-            <div class="fact-box">
+            <div class="fact-box reveal">
               <div class="label">Date</div>
               <div class="value">Nov 14</div>
             </div>
-            <div class="fact-box">
+            <div class="fact-box reveal">
               <div class="label">Location</div>
               <div class="value">Fort Stockton, TX</div>
             </div>
-            <div class="fact-box">
+            <div class="fact-box reveal">
               <div class="label">Format</div>
               <div class="value">4-Person Scramble</div>
             </div>
           </div>
           <div style="margin-top: 26px;">
-            <a href="contact.html?reason=golf&amp;tier=Player+Registration" class="btn btn-primary">Register to Play</a>
+            <a href="contact.html?reason=golf&amp;tier=Player+Registration" class="btn-solid">Register to Play</a>
           </div>
         </div>
       </div>
@@ -85,84 +87,86 @@
 
   <section class="section" style="background: var(--bone);">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head reveal">
         <span class="kicker">Sponsorship Levels</span>
         <h2>Current Sponsorship Openings</h2>
       </div>
-      <p class="lede" style="margin-bottom: 34px;">Each level below funds a different part of tournament day. Availability updates as sponsorships are claimed. To reserve a level, tap it and send us your details.</p>
+      <p class="lede reveal" style="margin-bottom: 34px;">Each level below funds a different part of tournament day. Availability updates as sponsorships are claimed. To reserve a level, tap it and send us your details.</p>
 
       <div class="tier-grid">
 
-        <div class="tier-card">
+        <div class="tier-card reveal">
           <div class="tier-top">
             <h3>Presenting Sponsor</h3>
             <span class="tier-price">$5,000</span>
           </div>
-          <span class="status-badge status-available" style="justify-self:start;">Available</span>
+          <span class="status-badge status-available">Available</span>
           <ul>
-            <li>Foundation name at the top of every tournament touchpoint</li>
+            <li>Memorial name at the top of every tournament touchpoint</li>
             <li>Logo on the flyer, banners, and player gift bags</li>
             <li>Reserved foursome and a speaking moment at the dinner</li>
           </ul>
-          <a href="contact.html?reason=golf&amp;tier=Presenting+Sponsor+%28%245%2C000%29" class="btn btn-primary">Reserve This Level</a>
+          <a href="contact.html?reason=golf&amp;tier=Presenting+Sponsor+%28%245%2C000%29" class="btn-solid">Reserve This Level</a>
         </div>
 
-        <div class="tier-card is-taken">
+        <div class="tier-card is-taken reveal">
           <div class="tier-top">
             <h3>Eagle Sponsor</h3>
             <span class="tier-price">$2,500</span>
           </div>
-          <span class="status-badge status-taken" style="justify-self:start;">Taken</span>
+          <span class="status-badge status-taken">Taken</span>
           <ul>
             <li>Logo on course signage and the tournament flyer</li>
             <li>Reserved foursome</li>
             <li>Recognition at the awards dinner</li>
           </ul>
-          <a class="btn btn-outline" aria-disabled="true">Currently Sponsored</a>
+          <a class="btn-disabled">Currently Sponsored</a>
         </div>
 
-        <div class="tier-card">
+        <div class="tier-card reveal">
           <div class="tier-top">
             <h3>Birdie Sponsor</h3>
             <span class="tier-price">$1,000</span>
           </div>
-          <span class="status-badge status-available" style="justify-self:start;">Available</span>
+          <span class="status-badge status-available">Available</span>
           <ul>
             <li>Logo on course signage</li>
             <li>Two player registrations included</li>
             <li>Listed on the website and event program</li>
           </ul>
-          <a href="contact.html?reason=golf&amp;tier=Birdie+Sponsor+%28%241%2C000%29" class="btn btn-primary">Reserve This Level</a>
+          <a href="contact.html?reason=golf&amp;tier=Birdie+Sponsor+%28%241%2C000%29" class="btn-solid">Reserve This Level</a>
         </div>
 
-        <div class="tier-card">
+        <div class="tier-card reveal">
           <div class="tier-top">
             <h3>Hole Sponsor</h3>
             <span class="tier-price">$250</span>
           </div>
-          <span class="status-badge status-available" style="justify-self:start;">Available</span>
+          <span class="status-badge status-available">Available</span>
           <ul>
             <li>Signage at one hole on the course</li>
             <li>Listed on the website and event program</li>
           </ul>
-          <a href="contact.html?reason=golf&amp;tier=Hole+Sponsor+%28%24250%29" class="btn btn-primary">Reserve This Level</a>
+          <a href="contact.html?reason=golf&amp;tier=Hole+Sponsor+%28%24250%29" class="btn-solid">Reserve This Level</a>
         </div>
 
       </div>
 
-      <p style="margin-top: 28px; font-size: 14px; opacity: 0.65; max-width: 60ch;">
+      <p style="margin-top: 28px; font-size: 14px; opacity: 0.6; max-width: 60ch;">
         Note for the site editor: sponsorship status is set directly in this page's code. To mark a level taken, add the class <code>is-taken</code> to its <code>.tier-card</code>, change its badge to <code>status-taken</code> with the text "Taken," and swap its button for the disabled "Currently Sponsored" version shown above on Eagle Sponsor.
       </p>
     </div>
   </section>
 
-  <section class="cta-band">
-    <div class="wrap">
-      <h2>Not Ready to Sponsor a Hole?</h2>
-      <p>You can still be part of tournament day. Come play, cheer on the players, or ask about volunteering.</p>
-      <a href="contact.html?reason=golf" class="btn btn-primary">Get in Touch</a>
-    </div>
-  </section>
+  <div class="reveal">
+    <section class="cta-band">
+      <div class="wrap cta-band-inner">
+        <h2>Not Ready to Sponsor a Hole?</h2>
+        <p>You can still be part of tournament day. Come play, cheer on the players, or ask about volunteering.</p>
+        <a href="contact.html?reason=golf" class="btn-solid">Get in Touch</a>
+      </div>
+    </section>
+  </div>
 
 </main>
 

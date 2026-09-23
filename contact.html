@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | Deedee Salmon Memorial</title>
-<meta name="description" content="Get in touch with the Deedee Salmon Memorial.">
+<meta name="description" content="Get in touch with the Deedee Salmon Memorial in Fort Stockton, Texas.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Bodoni+Moda:ital,wght@1,600;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Bodoni+Moda:ital,wght@1,600;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,17 +15,19 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a href="index.html" class="brand-mark">Deedee Salmon Memorial<span>Deandrea Munoz Salmon</span></a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
-    <nav class="main-nav" id="primary-nav" aria-label="Primary">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="pillars.html">Pillars</a></li>
-        <li><a href="give.html">Ways to Partner</a></li>
-        <li><a href="contact.html" aria-current="page">Contact</a></li>
-        <li><a href="https://www.venmo.com/u/deedeesalmonmemorial" class="nav-give" target="_blank" rel="noopener">Give Now</a></li>
-      </ul>
+    <nav class="nav-glass">
+      <a href="index.html" class="brand-mark">Deedee Salmon Memorial<span>Deandrea Munoz Salmon</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <nav class="main-nav" id="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="pillars.html">Pillars</a></li>
+          <li><a href="give.html">Ways to Partner</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+          <li><a href="https://www.venmo.com/u/deedeesalmonmemorial" class="nav-give" target="_blank" rel="noopener">Give Now</a></li>
+        </ul>
+      </nav>
     </nav>
   </div>
 </header>
@@ -33,7 +35,7 @@
 <main id="main">
 
   <section class="page-header">
-    <div class="wrap">
+    <div class="wrap page-header-inner">
       <span class="kicker">Get in Touch</span>
       <h1>We'd Love to Hear From You</h1>
       <p id="context-line">Questions about the tournament, becoming a Legacy Giving Partner, or anything else. Send us a note.</p>
@@ -43,10 +45,10 @@
   <section class="section">
     <div class="wrap two-col">
 
-      <div>
-        <div class="section-head">
+      <div class="reveal reveal-item">
+        <div class="section-head" style="text-align:left; margin-bottom: 30px;">
           <span class="kicker">Send a Message</span>
-          <h2>Reach the Family</h2>
+          <h2 style="font-family:'Playfair Display',serif; font-weight:700; font-size: clamp(26px,3.2vw,34px);">Reach the Family</h2>
         </div>
         <form class="form-grid" id="contact-form" novalidate>
           <div class="field">
@@ -72,16 +74,16 @@
             <textarea id="message" name="message" required></textarea>
           </div>
           <div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
+            <button type="submit" class="btn-solid">Send Message</button>
           </div>
           <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
 
-      <div>
-        <div class="section-head">
+      <div class="reveal reveal-item">
+        <div class="section-head" style="text-align:left; margin-bottom: 30px;">
           <span class="kicker">Memorial Details</span>
-          <h2>Find Us</h2>
+          <h2 style="font-family:'Playfair Display',serif; font-weight:700; font-size: clamp(26px,3.2vw,34px);">Find Us</h2>
         </div>
         <div class="contact-info">
           <div class="item">
@@ -90,7 +92,7 @@
           </div>
           <div class="item">
             <div class="label">Email</div>
-            <div class="value">hello@deedeesalmonfoundation.org</div>
+            <div class="value">hello@deedeesalmonmemorial.org</div>
           </div>
           <div class="item">
             <div class="label">Follow Along</div>
@@ -142,8 +144,6 @@
 
 <script src="nav.js"></script>
 <script>
-  // Prefill the form based on ?reason=&tier=&frequency= params coming from
-  // the Golf Tournament and Legacy Giving pages.
   (function () {
     var params = new URLSearchParams(window.location.search);
     var reason = params.get('reason');
