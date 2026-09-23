@@ -380,9 +380,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .glass-card.pillar-red:hover { background: rgba(128,0,32,0.23); }
 /* Pillars page only: the full-width rows carry more colour than the
    compact cards on the home page, which stay as they are. */
-.pillar-row.pillar-blue { background: rgba(11,29,52,0.34); border-color: rgba(11,29,52,0.46); }
-.pillar-row.pillar-olive { background: rgba(107,111,78,0.53); border-color: rgba(107,111,78,0.62); }
-.pillar-row.pillar-red { background: rgba(128,0,32,0.35); border-color: rgba(128,0,32,0.46); }
+.pillar-row.pillar-blue,
+.value-box.pillar-blue { background: rgba(11,29,52,0.34); border-color: rgba(11,29,52,0.46); }
+.pillar-row.pillar-olive,
+.value-box.pillar-olive { background: rgba(107,111,78,0.53); border-color: rgba(107,111,78,0.62); }
+.pillar-row.pillar-red,
+.value-box.pillar-red { background: rgba(128,0,32,0.35); border-color: rgba(128,0,32,0.46); }
 .pillar-row.pillar-blue:hover { background: rgba(11,29,52,0.42); }
 .pillar-row.pillar-olive:hover { background: rgba(107,111,78,0.62); }
 .pillar-row.pillar-red:hover { background: rgba(128,0,32,0.43); }
@@ -567,15 +570,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
    ============================================================ */
 .cta-band {
   position: relative; z-index: 1;
-  background: linear-gradient(165deg, #1F1F1F 0%, #171717 55%, #121212 100%);
+  background: linear-gradient(165deg, #3E2715 0%, #34200F 55%, #2B1B10 100%);
   color: #fff;
-  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  border-top: 1px solid rgba(201, 154, 91, 0.22);
   text-align: center; padding: 100px 32px; overflow: hidden;
 }
 .cta-band::before {
   content: ""; position: absolute;
   width: 600px; height: 600px;
-  background: radial-gradient(circle, rgba(128,0,32,0.35), transparent 70%);
+  background: radial-gradient(circle, rgba(201,154,91,0.22), transparent 70%);
   bottom: -300px; right: -100px; pointer-events: none;
 }
 .cta-band-inner { position: relative; z-index: 1; }
