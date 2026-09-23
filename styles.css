@@ -378,6 +378,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .glass-card.pillar-blue:hover { background: rgba(11,29,52,0.27); }
 .glass-card.pillar-olive:hover { background: rgba(107,111,78,0.27); }
 .glass-card.pillar-red:hover { background: rgba(128,0,32,0.23); }
+/* Pillars page only: the full-width rows carry more colour than the
+   compact cards on the home page, which stay as they are. */
+.pillar-row.pillar-blue { background: rgba(11,29,52,0.34); border-color: rgba(11,29,52,0.46); }
+.pillar-row.pillar-olive { background: rgba(107,111,78,0.53); border-color: rgba(107,111,78,0.62); }
+.pillar-row.pillar-red { background: rgba(128,0,32,0.35); border-color: rgba(128,0,32,0.46); }
+.pillar-row.pillar-blue:hover { background: rgba(11,29,52,0.42); }
+.pillar-row.pillar-olive:hover { background: rgba(107,111,78,0.62); }
+.pillar-row.pillar-red:hover { background: rgba(128,0,32,0.43); }
+
 .glass-card.tint-gold { background: rgba(201,154,91,0.20); border-color: rgba(201,154,91,0.32); }
 .glass-card.tint-blue { background: rgba(11,29,52,0.20); border-color: rgba(11,29,52,0.30); }
 .glass-card.tint-red { background: rgba(128,0,32,0.17); border-color: rgba(128,0,32,0.26); }
@@ -463,6 +472,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .value-box.on-dark, .fact-box.on-dark { background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.20); }
 .value-box.on-dark .label, .fact-box.on-dark .label { color: #c9bda3; opacity: 1; }
 .value-box.on-dark .title, .fact-box.on-dark .value { color: #fff; }
+
+/* Brand-coloured tiles for dark sections, so the three pillars read as
+   three distinct things rather than one grey row. */
+.value-box.on-dark.pillar-blue { background: rgba(11, 29, 52, 0.88); border-color: rgba(70, 110, 160, 0.45); }
+.value-box.on-dark.pillar-olive { background: rgba(107, 111, 78, 0.45); border-color: rgba(154, 159, 116, 0.48); }
+.value-box.on-dark.pillar-red { background: rgba(128, 0, 32, 0.72); border-color: rgba(178, 60, 90, 0.45); }
 @media (max-width: 640px) { .values-row, .facts-row { grid-template-columns: 1fr; } }
 
 /* ============================================================
@@ -552,7 +567,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
    ============================================================ */
 .cta-band {
   position: relative; z-index: 1;
-  background: var(--obsidian); color: #fff;
+  background: linear-gradient(165deg, #1F1F1F 0%, #171717 55%, #121212 100%);
+  color: #fff;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
   text-align: center; padding: 100px 32px; overflow: hidden;
 }
 .cta-band::before {
@@ -571,7 +588,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* ============================================================
    Footer
    ============================================================ */
-.site-footer { position: relative; z-index: 1; background: var(--obsidian); color: #fff; padding: 60px 0 34px; }
+.site-footer {
+  position: relative; z-index: 1;
+  background: #080808; color: #fff;
+  border-top: 1px solid rgba(201, 154, 91, 0.28);
+  padding: 60px 0 34px;
+}
 .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 40px; margin-bottom: 44px; }
 @media (max-width: 700px) { .footer-grid { grid-template-columns: 1fr; gap: 34px; } }
 .footer-brand .brand-mark { color: #fff; }
