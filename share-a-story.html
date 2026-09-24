@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Share a Story | Deedee Salmon Memorial</title>
+<meta name="description" content="Tell us about someone who could use a hand. Stories are reviewed each month as part of the Live Generously pillar of the Deedee Salmon Memorial.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Bodoni+Moda:ital,wght@1,600;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <nav class="nav-glass">
+      <a href="index.html" class="brand-mark">Deedee Salmon Memorial<span>Deandrea Munoz Salmon</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <nav class="main-nav" id="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="pillars.html" aria-current="page">Pillars</a></li>
+          <li><a href="give.html">Ways to Partner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://www.venmo.com/u/deedeesalmonmemorial" class="nav-give" target="_blank" rel="noopener">Give Now</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-header">
+    <div class="wrap page-header-inner">
+      <span class="kicker">Live Generously</span>
+      <h1>Share a Story</h1>
+      <p>Know someone carrying something heavy right now? Tell us about them. We read every story that comes in.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <a href="pillars.html" class="back-link">&larr; Back to the Three Pillars</a>
+
+      <div class="section-head">
+        <span class="kicker">How It Works</span>
+        <h2>Every Story Gets Read</h2>
+      </div>
+
+      <div class="values-row reveal">
+        <div class="value-box pillar-red">
+          <div class="label">Step One</div>
+          <div class="title">You Share</div>
+        </div>
+        <div class="value-box pillar-red">
+          <div class="label">Step Two</div>
+          <div class="title">We Review Monthly</div>
+        </div>
+        <div class="value-box pillar-red">
+          <div class="label">Step Three</div>
+          <div class="title">We Reach Out</div>
+        </div>
+      </div>
+
+      <p class="lede reveal" style="margin: 34px auto 0; text-align: center;">Once a month our family sits down together and reads through every story that has come in. When we are able to help, we reach out directly to the person who submitted it. We are a small family memorial, so we cannot say yes to everything, but nothing goes unread.</p>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Tell Us About Them</span>
+        <h2>Submit a Story</h2>
+      </div>
+
+      <!-- ============================================================
+           FORMSPREE: replace YOUR_FORM_ID below with the ID from your
+           Formspree dashboard, e.g. action="https://formspree.io/f/xayzbwkd"
+           ============================================================ -->
+      <form class="form-grid" id="story-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="hidden" name="_subject" value="New Live Generously story submission">
+        <p style="display:none;"><label>Leave this field empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
+
+        <div class="field">
+          <label for="your-name">Your name</label>
+          <input type="text" id="your-name" name="Your name" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="your-email">Your email</label>
+          <input type="email" id="your-email" name="Your email" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="your-phone">Your phone <span style="opacity:0.55; text-transform:none; letter-spacing:0;">(optional)</span></label>
+          <input type="tel" id="your-phone" name="Your phone" autocomplete="tel">
+        </div>
+        <div class="field">
+          <label for="about-who">Who is this story about</label>
+          <input type="text" id="about-who" name="Who the story is about" required placeholder="A name, or just how you know them">
+        </div>
+        <div class="field">
+          <label for="where">Where are they</label>
+          <input type="text" id="where" name="Where they are" placeholder="City or town">
+        </div>
+        <div class="field">
+          <label for="story">Their story</label>
+          <textarea id="story" name="Their story" required placeholder="What are they going through right now?"></textarea>
+        </div>
+        <div class="field">
+          <label for="how-help">How would a gift help</label>
+          <textarea id="how-help" name="How a gift would help" placeholder="Anything specific we should know about what is needed"></textarea>
+        </div>
+        <div class="field">
+          <label for="permission">May we share this story publicly?</label>
+          <select id="permission" name="Permission to share">
+            <option value="Ask me first">Ask me first</option>
+            <option value="Yes, with names">Yes, names included</option>
+            <option value="Yes, but no names">Yes, but please leave names out</option>
+            <option value="No">Please keep it private</option>
+          </select>
+        </div>
+        <div>
+          <button type="submit" class="btn-solid">Send Story</button>
+        </div>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <div class="reveal">
+    <section class="cta-band">
+      <div class="wrap cta-band-inner">
+        <h2>Want to Help Us Say Yes More Often?</h2>
+        <p>Every gift to the memorial goes toward the three pillars, and Live Generously is the one that lets us meet needs as they come.</p>
+        <a href="give.html" class="btn-solid">Ways to Partner</a>
+      </div>
+    </section>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-mark">Deedee Salmon Memorial</div>
+        <p>A family-led memorial carrying Deedee Salmon's legacy forward by celebrating excellence, empowering families, and living generously in the communities we call home.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="pillars.html">Pillars</a></li>
+          <li><a href="give.html">Ways to Partner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get Involved</h4>
+        <ul>
+          <li><a href="https://www.venmo.com/u/deedeesalmonmemorial" target="_blank" rel="noopener">Give Now</a></li>
+          <li><a href="golf-tournament.html">Annual Golf Tournament</a></li>
+          <li><a href="miles-for-mom.html">Miles for Mom</a></li>
+          <li><a href="share-a-story.html">Share a Story</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Deedee Salmon Memorial. Rooted in Fort Stockton, Texas.</span>
+      <span>Psalm 27:13</span>
+    </div>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>
