@@ -314,13 +314,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   color: #fff;
   background: linear-gradient(180deg,
     rgba(38,32,25,0) 0%,
-    #262019 8%, #262019 92%,
+    #262019 14%, #262019 86%,
     rgba(38,32,25,0) 100%);
 }
 .section-soft {
   background: linear-gradient(180deg,
     rgba(216,207,188,0) 0%,
-    #D8CFBC 8%, #D8CFBC 92%,
+    #D8CFBC 14%, #D8CFBC 86%,
     rgba(216,207,188,0) 100%);
 }
 .section-head { margin-bottom: 48px; text-align: center; }
@@ -589,7 +589,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
    ============================================================ */
 .cta-band {
   position: relative; z-index: 1;
-  background: linear-gradient(180deg, #E4DCCB 0%, #D6CCB8 100%);
+  background: linear-gradient(180deg,
+    rgba(228,220,203,0) 0%,
+    #E4DCCB 12%,
+    #D6CCB8 100%);
   color: var(--obsidian);
   text-align: center; padding: 100px 32px; overflow: hidden;
 }
@@ -614,9 +617,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
    much that the page bottom turns into a gradient of its own. */
 .site-footer {
   position: relative; z-index: 1;
-  background: linear-gradient(180deg, #D6CCB8 0%, #0A0908 15%, #0A0908 100%);
+  background: linear-gradient(180deg, #D6CCB8 0%, #0A0908 22%, #0A0908 100%);
   color: #fff;
-  padding: 104px 0 34px;
+  padding: 116px 0 34px;
 }
 .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 40px; margin-bottom: 44px; }
 @media (max-width: 700px) { .footer-grid { grid-template-columns: 1fr; gap: 34px; } }
