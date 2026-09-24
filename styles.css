@@ -583,7 +583,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
    ============================================================ */
 .cta-band {
   position: relative; z-index: 1;
-  background: linear-gradient(180deg, #1A1A1A 0%, #141414 100%);
+  background: #1C1C1C;
   color: #fff;
   text-align: center; padding: 100px 32px; overflow: hidden;
 }
