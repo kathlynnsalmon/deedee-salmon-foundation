@@ -171,7 +171,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .main-nav.open a:hover, .main-nav.open a[aria-current="page"] { color: var(--tobacco); }
   .main-nav.open a::after { background: var(--tobacco); }
   .main-nav li:last-child { border-top: none; padding-top: 6px; }
-  .main-nav .nav-give { display: inline-flex; margin-top: 8px; }
+  /* (0,3,0) so it outranks `.main-nav.open a` at (0,2,1), which was
+     stripping the capsule's side padding and closing its caps on the label */
+  .main-nav.open .nav-give {
+    display: inline-flex;
+    width: auto;
+    margin-top: 10px;
+    padding: 13px 28px;
+    white-space: nowrap;
+  }
 }
 
 /* ============================================================
