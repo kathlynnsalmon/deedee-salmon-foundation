@@ -314,13 +314,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   color: #fff;
   background: linear-gradient(180deg,
     rgba(38,32,25,0) 0,
-    #262019 44px, #262019 calc(100% - 44px),
+    #262019 30px, #262019 calc(100% - 30px),
     rgba(38,32,25,0) 100%);
 }
 .section-soft {
   background: linear-gradient(180deg,
     rgba(216,207,188,0) 0,
-    #D8CFBC 44px, #D8CFBC calc(100% - 44px),
+    #D8CFBC 30px, #D8CFBC calc(100% - 30px),
     rgba(216,207,188,0) 100%);
 }
 .section-head { margin-bottom: 48px; text-align: center; }
@@ -591,7 +591,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   position: relative; z-index: 1;
   background: linear-gradient(180deg,
     rgba(228,220,203,0) 0,
-    #E4DCCB 40px,
+    #E4DCCB 28px,
     #D6CCB8 100%);
   color: var(--obsidian);
   text-align: center; padding: 100px 32px; overflow: hidden;
@@ -617,7 +617,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
    much that the page bottom turns into a gradient of its own. */
 .site-footer {
   position: relative; z-index: 1;
-  background: linear-gradient(180deg, #D6CCB8 0, #0A0908 56px, #0A0908 100%);
+  background: linear-gradient(180deg, #D6CCB8 0, #0A0908 40px, #0A0908 100%);
   color: #fff;
   padding: 100px 0 34px;
 }
