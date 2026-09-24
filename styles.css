@@ -170,16 +170,27 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .main-nav.open a { display: block; padding: 14px 0; color: var(--obsidian); }
   .main-nav.open a:hover, .main-nav.open a[aria-current="page"] { color: var(--tobacco); }
   .main-nav.open a::after { background: var(--tobacco); }
-  .main-nav li:last-child { border-top: none; padding-top: 6px; }
-  /* (0,3,0) so it outranks `.main-nav.open a` at (0,2,1), which was
-     stripping the capsule's side padding and closing its caps on the label */
+
+  /* In the menu, Give Now is just another item: no capsule, same left edge,
+     type and divider as its neighbours. The !important on colour is needed
+     to undo the one on the desktop pill rule. */
   .main-nav.open .nav-give {
-    display: inline-flex;
-    width: auto;
-    margin-top: 10px;
-    padding: 13px 28px;
-    white-space: nowrap;
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    padding: 14px 0;
+    background: none;
+    border-radius: 0;
+    color: var(--obsidian) !important;
+    font-size: 12.5px;
+    letter-spacing: 0.07em;
   }
+  .main-nav.open .nav-give:hover,
+  .main-nav.open .nav-give[aria-current="page"] {
+    background: none;
+    color: var(--tobacco) !important;
+  }
+  .main-nav.open .nav-give::after { display: block; background: var(--tobacco); }
 }
 
 /* ============================================================
