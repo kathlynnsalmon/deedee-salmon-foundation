@@ -312,7 +312,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
    section's padding, so text always lands on the solid middle. */
 .section-dark {
   color: #fff;
-  background: #262019;
+  background: #1C1C1C;
 }
 .section-soft {
   background: var(--bone);
