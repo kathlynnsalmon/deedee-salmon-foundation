@@ -304,6 +304,32 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
    Sections
    ============================================================ */
 .section { position: relative; z-index: 1; padding: 110px 0; }
+
+/* Tinted sections dissolve into their neighbours instead of butting up
+   against them. Each gradient starts and ends at its own colour with zero
+   alpha, so the page behind shows through the fade and the transition
+   works against whatever sits above or below. The ramps stay inside the
+   section's padding, so text always lands on the solid middle. */
+.section-dark {
+  color: #fff;
+  background: linear-gradient(180deg,
+    rgba(38,32,25,0) 0%,
+    rgba(38,32,25,0.55) 6%,
+    rgba(38,32,25,1) 16%,
+    #262019 30%, #262019 70%,
+    rgba(38,32,25,1) 84%,
+    rgba(38,32,25,0.55) 94%,
+    rgba(38,32,25,0) 100%);
+}
+.section-soft {
+  background: linear-gradient(180deg,
+    rgba(216,207,188,0) 0%,
+    rgba(216,207,188,0.6) 7%,
+    rgba(216,207,188,1) 18%,
+    rgba(216,207,188,1) 82%,
+    rgba(216,207,188,0.6) 93%,
+    rgba(216,207,188,0) 100%);
+}
 .section-head { margin-bottom: 48px; text-align: center; }
 .kicker {
   font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 0.22em;
@@ -570,9 +596,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
    ============================================================ */
 .cta-band {
   position: relative; z-index: 1;
-  background: linear-gradient(165deg, #E4DCCB 0%, #DED5C3 55%, #D6CCB8 100%);
+  background: linear-gradient(180deg,
+    rgba(228,220,203,0) 0%,
+    rgba(228,220,203,0.6) 7%,
+    #E4DCCB 18%,
+    #DED5C3 60%,
+    #D6CCB8 100%);
   color: var(--obsidian);
-  border-top: 1px solid rgba(17, 17, 17, 0.10);
   text-align: center; padding: 100px 32px; overflow: hidden;
 }
 .cta-band::before {
@@ -591,11 +621,21 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* ============================================================
    Footer
    ============================================================ */
+/* Picks up exactly where the CTA band leaves off and darkens through the
+   top padding, so the bone band and the footer read as one long dissolve
+   rather than two blocks meeting at an edge. */
 .site-footer {
   position: relative; z-index: 1;
-  background: #080808; color: #fff;
-  border-top: 1px solid rgba(201, 154, 91, 0.28);
-  padding: 60px 0 34px;
+  background: linear-gradient(180deg,
+    #D6CCB8 0%,
+    #AEA290 7%,
+    #74695B 14%,
+    #3A322A 22%,
+    #171412 30%,
+    #0A0908 38%,
+    #080808 100%);
+  color: #fff;
+  padding: 180px 0 34px;
 }
 .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 40px; margin-bottom: 44px; }
 @media (max-width: 700px) { .footer-grid { grid-template-columns: 1fr; gap: 34px; } }
