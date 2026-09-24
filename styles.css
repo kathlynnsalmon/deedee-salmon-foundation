@@ -314,20 +314,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   color: #fff;
   background: linear-gradient(180deg,
     rgba(38,32,25,0) 0%,
-    rgba(38,32,25,0.55) 6%,
-    rgba(38,32,25,1) 16%,
-    #262019 30%, #262019 70%,
-    rgba(38,32,25,1) 84%,
-    rgba(38,32,25,0.55) 94%,
+    #262019 8%, #262019 92%,
     rgba(38,32,25,0) 100%);
 }
 .section-soft {
   background: linear-gradient(180deg,
     rgba(216,207,188,0) 0%,
-    rgba(216,207,188,0.6) 7%,
-    rgba(216,207,188,1) 18%,
-    rgba(216,207,188,1) 82%,
-    rgba(216,207,188,0.6) 93%,
+    #D8CFBC 8%, #D8CFBC 92%,
     rgba(216,207,188,0) 100%);
 }
 .section-head { margin-bottom: 48px; text-align: center; }
@@ -596,12 +589,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
    ============================================================ */
 .cta-band {
   position: relative; z-index: 1;
-  background: linear-gradient(180deg,
-    rgba(228,220,203,0) 0%,
-    rgba(228,220,203,0.6) 7%,
-    #E4DCCB 18%,
-    #DED5C3 60%,
-    #D6CCB8 100%);
+  background: linear-gradient(180deg, #E4DCCB 0%, #D6CCB8 100%);
   color: var(--obsidian);
   text-align: center; padding: 100px 32px; overflow: hidden;
 }
@@ -621,21 +609,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* ============================================================
    Footer
    ============================================================ */
-/* Picks up exactly where the CTA band leaves off and darkens through the
-   top padding, so the bone band and the footer read as one long dissolve
-   rather than two blocks meeting at an edge. */
+/* Starts on the colour the CTA band ends on and settles to dark in one
+   short ramp inside the top padding — enough to avoid a hard seam, not so
+   much that the page bottom turns into a gradient of its own. */
 .site-footer {
   position: relative; z-index: 1;
-  background: linear-gradient(180deg,
-    #D6CCB8 0%,
-    #AEA290 7%,
-    #74695B 14%,
-    #3A322A 22%,
-    #171412 30%,
-    #0A0908 38%,
-    #080808 100%);
+  background: linear-gradient(180deg, #D6CCB8 0%, #0A0908 15%, #0A0908 100%);
   color: #fff;
-  padding: 180px 0 34px;
+  padding: 104px 0 34px;
 }
 .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 40px; margin-bottom: 44px; }
 @media (max-width: 700px) { .footer-grid { grid-template-columns: 1fr; gap: 34px; } }
