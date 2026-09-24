@@ -136,7 +136,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .site-header.scrolled .main-nav a[aria-current="page"] { color: var(--tobacco); }
 .nav-toggle { color: #fff; transition: color 0.4s var(--ease); }
 .site-header.scrolled .nav-toggle { color: var(--obsidian); }
-.nav-give {
+.main-nav .nav-give {
   font-family: 'Jost', sans-serif;
   font-size: 12px;
   letter-spacing: 0.08em;
@@ -147,33 +147,31 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   align-items: center;
   justify-content: center;
   line-height: 1;
-  padding: 11px 20px 10px;
+  padding: 11px 20px;
   border-radius: 999px;
 }
-.nav-give::after { display: none; }
-.nav-give:hover { background: var(--obsidian); }
+.main-nav .nav-give::after { display: none; }
+.main-nav .nav-give:hover { background: var(--obsidian); }
 .nav-toggle { display: none; background: none; border: none; font-family: 'Jost', sans-serif; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; }
 @media (max-width: 780px) {
   .nav-toggle { display: block; }
   .main-nav { display: none; position: absolute; top: 68px; left: 20px; right: 20px; }
   .main-nav.open {
     display: block;
-    background: rgba(24, 24, 24, 0.97);
-    backdrop-filter: blur(24px) saturate(160%);
-    -webkit-backdrop-filter: blur(24px) saturate(160%);
-    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: #FCF9F4;
+    border: 1px solid rgba(17, 17, 17, 0.14);
     border-radius: 24px;
-    box-shadow: var(--glass-shadow);
+    box-shadow: 0 16px 40px rgba(17, 17, 17, 0.22);
     padding: 10px 22px 18px;
   }
   .main-nav ul { flex-direction: column; align-items: flex-start; gap: 4px; }
-  .main-nav li { width: 100%; border-top: 1px solid rgba(255,255,255,0.12); }
+  .main-nav li { width: 100%; border-top: 1px solid rgba(17,17,17,0.10); }
   .main-nav li:first-child { border-top: none; }
-  .main-nav.open a { display: block; padding: 14px 0; color: #fff; }
-  .main-nav.open a:hover, .main-nav.open a[aria-current="page"] { color: var(--warm-gold); }
-  .main-nav.open a::after { background: var(--warm-gold); }
+  .main-nav.open a { display: block; padding: 14px 0; color: var(--obsidian); }
+  .main-nav.open a:hover, .main-nav.open a[aria-current="page"] { color: var(--tobacco); }
+  .main-nav.open a::after { background: var(--tobacco); }
   .main-nav li:last-child { border-top: none; padding-top: 6px; }
-  .nav-give { display: inline-flex; margin-top: 8px; }
+  .main-nav .nav-give { display: inline-flex; margin-top: 8px; }
 }
 
 /* ============================================================
