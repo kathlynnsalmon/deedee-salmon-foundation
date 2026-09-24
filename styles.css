@@ -108,11 +108,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   transition: color 0.4s var(--ease);
 }
 .site-header.scrolled .brand-mark span { color: var(--tobacco); }
-.main-nav ul { display: flex; align-items: center; gap: 26px; list-style: none; }
+.main-nav ul { display: flex; align-items: center; gap: 20px; list-style: none; }
 .main-nav a {
   font-family: 'Jost', sans-serif;
-  font-size: 12.5px;
-  letter-spacing: 0.07em;
+  font-size: 12px;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #fff;
   position: relative;
@@ -153,7 +153,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .main-nav .nav-give::after { display: none; }
 .main-nav .nav-give:hover { background: var(--obsidian); }
 .nav-toggle { display: none; background: none; border: none; font-family: 'Jost', sans-serif; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; }
-@media (max-width: 780px) {
+@media (max-width: 1040px) {
   .nav-toggle { display: block; }
   .main-nav { display: none; position: absolute; top: 68px; left: 20px; right: 20px; }
   .main-nav.open {
@@ -182,8 +182,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     background: none;
     border-radius: 0;
     color: var(--obsidian) !important;
-    font-size: 12.5px;
-    letter-spacing: 0.07em;
+    font-size: 12px;
+    letter-spacing: 0.06em;
   }
   .main-nav.open .nav-give:hover,
   .main-nav.open .nav-give[aria-current="page"] {
@@ -458,6 +458,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .pillar-row-head { display: flex; flex-direction: column; gap: 10px; }
 .pillar-row h3 { font-size: 25px; }
+/* Bronze sat badly on the tinted cards; the row already knows its own
+   colour, so the button borrows it. */
+.pillar-row .btn-solid { background: var(--pillar-color, var(--tobacco)); }
+.pillar-row .btn-solid:hover { background: var(--obsidian); }
 .pillar-row p { font-size: 16px; }
 @media (max-width: 700px) { .pillar-row { grid-template-columns: 1fr; gap: 18px; text-align: left; } }
 
@@ -466,15 +470,16 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
    ============================================================ */
 .photo-slot {
   width: 100%;
-  background: repeating-linear-gradient(135deg, rgba(17,17,17,0.08), rgba(17,17,17,0.08) 1px, transparent 1px, transparent 12px);
-  border: 1px dashed rgba(17,17,17,0.18);
+  background-color: rgba(17,17,17,0.17);
+  background-image: repeating-linear-gradient(135deg, rgba(17,17,17,0.10), rgba(17,17,17,0.10) 1px, transparent 1px, transparent 12px);
+  border: 1px dashed rgba(17,17,17,0.34);
   border-radius: 20px;
   display: flex; align-items: center; justify-content: center;
   text-align: center;
 }
 .photo-slot span {
   font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.1em;
-  text-transform: uppercase; opacity: 0.45; padding: 0 20px;
+  text-transform: uppercase; opacity: 0.62; padding: 0 20px;
 }
 .portrait-slot { aspect-ratio: 3 / 4; }
 .pillar-photo-slot { max-width: 200px; aspect-ratio: 4 / 3; margin-bottom: 6px; }
