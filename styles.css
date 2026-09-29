@@ -684,3 +684,62 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .reveal { opacity: 1 !important; transform: none !important; filter: none !important; }
 }
+
+/* ============================================================
+   Phone (<= 640px)
+   ------------------------------------------------------------
+   Everything above is written for desktop and simply narrowed on
+   a phone, which left roughly 1,300px of padding per page and
+   headings sitting on their clamp() floors rather than on sizes
+   chosen for the screen. This block is the only phone-specific
+   layer; desktop is untouched by it.
+   ============================================================ */
+@media (max-width: 640px) {
+
+  /* Space --------------------------------------------------- */
+  .wrap { padding: 0 20px; }
+  .hero { padding: 120px 0 72px; }
+  .page-header { padding: 108px 0 56px; }
+  .section { padding: 64px 0; }
+  .section:not(.section-soft):not(.section-dark) + .section:not(.section-soft):not(.section-dark) {
+    padding-top: 30px;
+  }
+  .cta-band { padding: 64px 20px; }
+  .site-footer { padding: 52px 0 28px; }
+  .glass-card { padding: 26px 22px; }
+  .glass-quote { padding: 28px 24px; }
+  .tier-card { padding: 26px 22px; }
+  .value-box, .fact-box { padding: 20px 16px; }
+
+  /* Type ---------------------------------------------------- */
+  .hero h1 { font-size: 34px; line-height: 1.12; margin-bottom: 16px; }
+  .page-header h1 { font-size: 29px; line-height: 1.18; }
+  .section-head h2 { font-size: 27px; line-height: 1.2; }
+  .cta-band h2 { font-size: 24px; }
+  .hero p, .page-header p { font-size: 16.5px; line-height: 1.7; }
+  .lede { font-size: 17px; line-height: 1.75; }
+  .cta-band p { font-size: 16.5px; margin-bottom: 26px; }
+  .glass-quote blockquote { font-size: 19px; line-height: 1.5; }
+
+  /* Touch --------------------------------------------------- */
+  .btn-solid, .btn-glass, .btn-outline-dark, .btn-frosted-primary, .btn-disabled {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 26px;
+  }
+  /* Primary calls to action go full width so they are easy to hit */
+  .hero-ctas { flex-direction: column; gap: 12px; margin-top: 28px; }
+  .hero-ctas a,
+  .cta-band .btn-solid,
+  .cta-band .btn-glass,
+  .form-grid button,
+  .give-card-glass a.btn-solid,
+  .tier-card .btn-solid,
+  .tier-card .btn-disabled { width: 100%; }
+  .cta-band-inner > div { display: flex; flex-direction: column; gap: 12px; }
+  .field input, .field textarea, .field select { padding: 15px 16px; }
+  .field textarea { min-height: 140px; }
+  .main-nav.open a { padding: 16px 0; }
+}
